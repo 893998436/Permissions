@@ -19,12 +19,23 @@ public class ProductController {
     @Autowired
     private IProductService iProductService;
 
+
+    //添加product 数据
+    @RequestMapping("/save.do")
+    public  String save(Product product) throws Exception {
+    iProductService.save(product);
+    return "redirect:findAll.do";
+    }
+
+
+
+    //查询全部product数据
     @RequestMapping("/findAll.do")
     public  ModelAndView findAll() throws Exception {
         ModelAndView mv=new ModelAndView();
         List<Product> ps = iProductService.findAll();
             mv.addObject("productList",ps);
-            mv.setViewName("product-list");
+            mv.setViewName("product-list1");
         return mv;
     }
 }
