@@ -1,15 +1,21 @@
 package com.itheima.ssm.domain;
 
 
+import com.itheima.ssm.utils.DateUtils;
+import org.springframework.format.annotation.DateTimeFormat;
+
+
 import java.util.Date;
 import java.util.List;
 
 public class Orders {
     private String id;
     private String orderNum;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private Date orderTime;
     private String orderTimeStr;
     private int orderStatus;
+    private String orderStatusStr;
     private int peopleCount;
     private Product product;
     private List<Traveller> travellers;
@@ -17,6 +23,20 @@ public class Orders {
     private Integer payType;
     private String payTypeStr;
     private String orderDesc;
+
+    public String getOrderStatusStr() {
+        //支付状态
+        if(orderStatus==0){
+            orderStatusStr="未支付";
+        }else  if (orderStatus==1){
+            orderStatusStr="已支付";
+        }
+        return orderStatusStr;
+    }
+
+    public void setOrderStatusStr(String orderStatusStr) {
+        this.orderStatusStr = orderStatusStr;
+    }
 
     public String getId() {
         return id;
@@ -43,6 +63,9 @@ public class Orders {
     }
 
     public String getOrderTimeStr() {
+        if(orderTime!=null){
+            orderTimeStr= DateUtils.dateToString(orderTime,"yyyy-MM-dd HH:mm");
+        }
         return orderTimeStr;
     }
 
@@ -99,6 +122,14 @@ public class Orders {
     }
 
     public String getPayTypeStr() {
+        //支付方式   0支付宝  1微信   2其他
+        if(payType==0){
+            payTypeStr="支付宝";
+        }else if (payType==1){
+            payTypeStr="微信";
+        }else if(payType==2){
+            payTypeStr="其他";
+        }
         return payTypeStr;
     }
 

@@ -1,5 +1,6 @@
 package com.itheima.ssm.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import com.itheima.ssm.dao.IOrdersDao;
 import com.itheima.ssm.domain.Orders;
 import com.itheima.ssm.service.IOrdersService;
@@ -16,7 +17,13 @@ public class IOrdersServiceImpl implements IOrdersService {
     private IOrdersDao iOrdersDao;
 
     @Override
-    public List<Orders> findAll() throws Exception {
+    public Orders findById(String ordersId) throws Exception {
+        return iOrdersDao.findById(ordersId);
+    }
+
+    @Override
+    public List<Orders> findAll(int page,int size) throws Exception {
+        PageHelper.startPage(page,size);
         return iOrdersDao.findAll();
     }
 }

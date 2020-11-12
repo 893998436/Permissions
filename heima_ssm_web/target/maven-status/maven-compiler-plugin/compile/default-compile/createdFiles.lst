@@ -1,1 +1,4 @@
+com\itheima\ssm\controller\TravellerController.class
+com\itheima\ssm\controller\MemberController.class
 com\itheima\ssm\controller\ProductController.class
+com\itheima\ssm\controller\OrderController.class
