@@ -1,6 +1,8 @@
 E:\项目资料\10-企业权限管理系统\heima_ssm\heima_ssm_dao\src\main\java\com\itheima\ssm\dao\IRoleDao.java
+E:\项目资料\10-企业权限管理系统\heima_ssm\heima_ssm_dao\src\main\java\com\itheima\ssm\dao\IPermissionDao.java
 E:\项目资料\10-企业权限管理系统\heima_ssm\heima_ssm_dao\src\main\java\com\itheima\ssm\dao\IMemberDao.java
 E:\项目资料\10-企业权限管理系统\heima_ssm\heima_ssm_dao\src\main\java\com\itheima\ssm\dao\IUserDao.java
 E:\项目资料\10-企业权限管理系统\heima_ssm\heima_ssm_dao\src\main\java\com\itheima\ssm\dao\IOrdersDao.java
 E:\项目资料\10-企业权限管理系统\heima_ssm\heima_ssm_dao\src\main\java\com\itheima\ssm\dao\IProductDao.java
+E:\项目资料\10-企业权限管理系统\heima_ssm\heima_ssm_dao\src\main\java\com\itheima\ssm\dao\ISysLogDao.java
 E:\项目资料\10-企业权限管理系统\heima_ssm\heima_ssm_dao\src\main\java\com\itheima\ssm\dao\ITravellerDao.java

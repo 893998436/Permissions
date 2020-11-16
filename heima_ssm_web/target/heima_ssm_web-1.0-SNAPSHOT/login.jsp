@@ -22,11 +22,14 @@
 	href="${pageContext.request.contextPath}/plugins/adminLTE/css/AdminLTE.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/plugins/iCheck/square/blue.css">
-    <style >
-        .hold-transition login-page{
-            background-image:url("img/3.jpg");
+
+    <style type="text/css">
+        .login-page {
+            background: url("img/2.jpg");
+            background-size: auto;
         }
     </style>
+
 </head>
 
 <body class="hold-transition login-page">
@@ -85,7 +88,7 @@
 			$('input').iCheck({
 				checkboxClass : 'icheckbox_square-blue',
 				radioClass : 'iradio_square-blue',
-				increaseArea : '20%' // optional
+				increaseArea : '40%' // optional
 			});
 		});
 	</script>
